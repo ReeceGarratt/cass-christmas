@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FadeIn from '../../components/FadeIn';
+import WorkCard from '../../components/WorkCard';
+import { getCollection } from 'astro:content';
+
+const allWork = await getCollection('work');
+const sortedWork = allWork.sort((a, b) => a.data.order - b.data.order);
+---
+
+<BaseLayout 
+  title="Work - UX Designer Portfolio" 
+  description="Explore my case studies and design projects showcasing user-centered design solutions."
+>
+  <section class="container-custom py-20">
+    <FadeIn client:load>
+      <h1 class="text-5xl md:text-6xl font-bold mb-6">
+        Selected <span class="gradient-text">Work</span>
+      </h1>
+      <p class="text-xl text-gray-600 max-w-2xl mb-16">
+        A collection of case studies showcasing my design process, from research and ideation to final implementation.
+      </p>
+    </FadeIn>
+
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+      {sortedWork.map((work, index) => (
+        <FadeIn client:load delay={index * 0.1}>
+          <WorkCard
+            client:load
+            title={work.data.title}
+            description={work.data.description}
+            client={work.data.client}
+            tags={work.data.tags}
+            coverImage={work.data.coverImage}
+            slug={work.slug}
+          />
+        </FadeIn>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,30 @@
+{
+  "name": "astro-portfolio",
+  "version": "1.0.0",
+  "description": "A UX designer portfolio built with Astro, Tailwind CSS, React, and MDX",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro check && astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@astrojs/mdx": "^4.3.9",
+    "@astrojs/react": "^4.4.1",
+    "@astrojs/tailwind": "^6.0.2",
+    "astro": "^5.15.3",
+    "framer-motion": "^12.23.24",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0",
+    "tailwindcss": "^3.4.18"
+  },
+  "devDependencies": {
+    "@astrojs/check": "^0.9.5",
+    "typescript": "^5.9.3"
+  }
+}

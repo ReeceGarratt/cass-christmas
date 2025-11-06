@@ -1,0 +1,121 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import FadeIn from '../../components/FadeIn';
+import { getCollection } from 'astro:content';
+import type { CollectionEntry } from 'astro:content';
+
+export async function getStaticPaths() {
+  const workEntries = await getCollection('work');
+  return workEntries.map(entry => ({
+    params: { slug: entry.slug },
+    props: { entry },
+  }));
+}
+
+interface Props {
+  entry: CollectionEntry<'work'>;
+}
+
+const { entry } = Astro.props;
+const { Content } = await entry.render();
+const { title, description, client, role, year, tags, coverImage } = entry.data;
+---
+
+<BaseLayout title={`${title} - Work`} description={description} image={coverImage}>
+  <!-- Hero Section -->
+  <section class="container-custom py-20">
+    <FadeIn client:load>
+      <a href="/work" class="inline-flex items-center text-primary hover:underline mb-8">
+        ← Back to Work
+      </a>
+      <h1 class="text-5xl md:text-6xl font-bold mb-4">{title}</h1>
+      <p class="text-xl text-gray-600 mb-8">{description}</p>
+      
+      <div class="flex flex-wrap gap-8 mb-8 text-sm">
+        <div>
+          <div class="text-gray-500 mb-1">Client</div>
+          <div class="font-medium">{client}</div>
+        </div>
+        <div>
+          <div class="text-gray-500 mb-1">Role</div>
+          <div class="font-medium">{role}</div>
+        </div>
+        <div>
+          <div class="text-gray-500 mb-1">Year</div>
+          <div class="font-medium">{year}</div>
+        </div>
+      </div>
+      
+      <div class="flex flex-wrap gap-2 mb-12">
+        {tags.map((tag) => (
+          <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+            {tag}
+          </span>
+        ))}
+      </div>
+    </FadeIn>
+
+    <FadeIn client:load delay={0.2}>
+      <div class="aspect-[16/9] rounded-2xl overflow-hidden mb-12">
+        <img src={coverImage} alt={title} class="w-full h-full object-cover" />
+      </div>
+    </FadeIn>
+  </section>
+
+  <!-- Content Section -->
+  <section class="container-custom pb-20">
+    <FadeIn client:load delay={0.3}>
+      <div class="prose prose-lg max-w-3xl mx-auto">
+        <Content />
+      </div>
+    </FadeIn>
+  </section>
+
+  <!-- Navigation -->
+  <section class="container-custom pb-20">
+    <FadeIn client:load>
+      <div class="flex justify-center gap-4">
+        <a href="/work" class="px-8 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors font-medium">
+          View All Projects
+        </a>
+        <a href="/contact" class="px-8 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors font-medium">
+          Get in Touch
+        </a>
+      </div>
+    </FadeIn>
+  </section>
+</BaseLayout>
+
+<style is:global>
+  .prose {
+    @apply text-gray-700;
+  }
+  
+  .prose h2 {
+    @apply text-3xl font-bold mt-12 mb-4 text-gray-900;
+  }
+  
+  .prose h3 {
+    @apply text-2xl font-bold mt-8 mb-3 text-gray-900;
+  }
+  
+  .prose p {
+    @apply mb-4 leading-relaxed;
+  }
+  
+  .prose ul, .prose ol {
+    @apply mb-4 ml-6;
+  }
+  
+  .prose li {
+    @apply mb-2;
+  }
+  
+  .prose img {
+    @apply rounded-lg my-8;
+  }
+  
+  .prose strong {
+    @apply font-semibold text-gray-900;
+  }
+</style>
