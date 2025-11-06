@@ -16,7 +16,11 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+-    <link rel="icon" href="/favicon.ico" />
+-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
     <meta name="generator" content={Astro.generator} />
     
     <!-- SEO Meta Tags -->
@@ -42,7 +46,7 @@ const canonicalURL = new URL(Astro.url.pathname, Astro.site);
     <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
       <nav class="container-custom py-4">
         <div class="flex justify-between items-center">
-          <a href="/" class="text-xl font-bold gradient-text">Portfolio</a>
+          <a href="/" class="text-xl font-bold gradient-text pe-8">Portfolio</a>
           <ul class="flex gap-8">
             <li><a href="/" class="hover:text-primary transition-colors">Home</a></li>
             <li><a href="/work" class="hover:text-primary transition-colors">Work</a></li>
