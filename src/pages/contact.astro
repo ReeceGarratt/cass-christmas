@@ -1,0 +1,152 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import FadeIn from '../components/FadeIn';
+---
+
+<BaseLayout 
+  title="Contact - UX Designer Portfolio" 
+  description="Get in touch to discuss your project, ask questions, or just say hello."
+>
+  <section class="container-custom py-20">
+    <div class="max-w-4xl mx-auto">
+      <FadeIn client:load>
+        <h1 class="text-5xl md:text-6xl font-bold mb-6 text-center">
+          Let's <span class="gradient-text">Connect</span>
+        </h1>
+        <p class="text-xl text-gray-600 text-center mb-16">
+          Have a project in mind or just want to chat? I'd love to hear from you.
+        </p>
+      </FadeIn>
+
+      <div class="grid md:grid-cols-2 gap-16">
+        <!-- Contact Form -->
+        <FadeIn client:load delay={0.1}>
+          <div>
+            <h2 class="text-2xl font-bold mb-6">Send a Message</h2>
+            <form class="space-y-6" name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+              <input type="hidden" name="form-name" value="contact" />
+              <p class="hidden">
+                <label>
+                  Don't fill this out if you're human: <input name="bot-field" />
+                </label>
+              </p>
+              
+              <div>
+                <label for="name" class="block text-sm font-medium mb-2">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="Your name"
+                />
+              </div>
+              
+              <div>
+                <label for="email" class="block text-sm font-medium mb-2">Email</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+                  placeholder="your@email.com"
+                />
+              </div>
+              
+              <div>
+                <label for="message" class="block text-sm font-medium mb-2">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  rows="5"
+                  class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent resize-none"
+                  placeholder="Tell me about your project..."
+                ></textarea>
+              </div>
+              
+              <button
+                type="submit"
+                class="w-full px-8 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors font-medium"
+              >
+                Send Message
+              </button>
+            </form>
+          </div>
+        </FadeIn>
+
+        <!-- Contact Info -->
+        <FadeIn client:load delay={0.2}>
+          <div class="space-y-8">
+            <div>
+              <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
+              <p class="text-gray-600 mb-6">
+                I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
+              </p>
+            </div>
+            
+            <div class="space-y-4">
+              <div class="flex items-start gap-4">
+                <div class="text-2xl">📧</div>
+                <div>
+                  <div class="font-medium mb-1">Email</div>
+                  <a href="mailto:hello@designer.com" class="text-primary hover:underline">
+                    hello@designer.com
+                  </a>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="text-2xl">📍</div>
+                <div>
+                  <div class="font-medium mb-1">Location</div>
+                  <div class="text-gray-600">San Francisco, CA</div>
+                </div>
+              </div>
+              
+              <div class="flex items-start gap-4">
+                <div class="text-2xl">🕐</div>
+                <div>
+                  <div class="font-medium mb-1">Availability</div>
+                  <div class="text-gray-600">Available for freelance projects</div>
+                </div>
+              </div>
+            </div>
+            
+            <div>
+              <h3 class="font-medium mb-4">Follow Me</h3>
+              <div class="flex gap-4">
+                <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <span class="text-xl">→</span>
+                </a>
+                <a
+                  href="https://linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <span class="text-xl">in</span>
+                </a>
+                <a
+                  href="https://dribbble.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="w-12 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <span class="text-xl">○</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </FadeIn>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
