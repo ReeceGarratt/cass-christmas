@@ -5,8 +5,8 @@ import mdx from '@astrojs/mdx';
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://ReeceGarratt.github.io',
-  base: '/astro-portfolio',
+  site: 'https://cassandragarratt.com',
+  base: '/',
   integrations: [
     tailwind(),
     react(),

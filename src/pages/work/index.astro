@@ -22,7 +22,7 @@ const sortedWork = allWork.sort((a, b) => a.data.order - b.data.order);
       </p>
     </FadeIn>
 
-    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
       {sortedWork.map((work, index) => (
         <FadeIn client:load delay={index * 0.1}>
           <WorkCard
