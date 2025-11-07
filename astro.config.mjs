@@ -10,7 +10,6 @@ export default defineConfig({
   site: isProduction ? 'https://reecegarratt.github.io' : 'http://localhost:3000',
   base: isProduction ? '/astro-portfolio/' : '/',
   // site: 'https://cassandragarratt.com'
-  base: '/',
   integrations: [
     tailwind(),
     react(),
