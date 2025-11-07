@@ -7,12 +7,13 @@ interface WorkCardProps {
   tags: string[];
   coverImage: string;
   slug: string;
+  base?: string;
 }
 
-export default function WorkCard({ title, description, client, tags, coverImage, slug }: WorkCardProps) {
+export default function WorkCard({ title, description, client, tags, coverImage, slug, base = '' }: WorkCardProps) {
   return (
     <motion.a
-      href={`/work/${slug}`}
+      href={`${base}work/${slug}`}
       className="group rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col"
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}

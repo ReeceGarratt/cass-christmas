@@ -2,6 +2,8 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import FadeIn from '../components/FadeIn';
 import CopyButton from '../components/CopyButton';
+
+const base = import.meta.env.BASE_URL;
 ---
 
 <BaseLayout 
@@ -75,12 +77,12 @@ import CopyButton from '../components/CopyButton';
                   class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 >
                   <img
-                    src="/github-mark.svg"
+                    src={`${base}github-mark.svg`}
                     alt="GitHub logo"
                     class="w-8 h-8 transition duration-200 block group-hover:hidden"
                   />
                   <img
-                    src="/github-mark-white.svg"
+                    src={`${base}github-mark-white.svg`}
                     alt="GitHub logo white"
                     class="w-8 h-8 transition duration-200 hidden group-hover:block"
                   />
@@ -93,7 +95,7 @@ import CopyButton from '../components/CopyButton';
                   class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
                 >
                   <img
-                    src="/InBug-Black.png"
+                    src={`${base}InBug-Black.png`}
                     alt="LinkedIn logo"
                     class="w-[32px] h-[29px] transition duration-200 group-hover:invert group-hover:brightness-200"
                   />
@@ -107,11 +109,11 @@ import CopyButton from '../components/CopyButton';
                 >
                   <img
                     class="w-[65px] h-[65px] transition duration-200 block group-hover:hidden"
-                    src="/dribbble.svg"
+                    src={`${base}dribbble.svg`}
                     alt="Dribbble logo"/>
                   <img
                     class="w-[65px] h-[65px] transition duration-200 hidden group-hover:block"
-                    src="/dribbble-white.svg"
+                    src={`${base}dribbble-white.svg`}
                     alt="Dribbble logo"/>
                 </a>
               </div>
