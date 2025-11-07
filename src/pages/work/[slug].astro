@@ -4,6 +4,8 @@ import FadeIn from '../../components/FadeIn';
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 
+const base = import.meta.env.BASE_URL;
+
 export async function getStaticPaths() {
   const workEntries = await getCollection('work');
   return workEntries.map(entry => ({
@@ -25,7 +27,7 @@ const { title, description, client, role, year, tags, coverImage } = entry.data;
   <!-- Hero Section -->
   <section class="container-custom py-20">
     <FadeIn client:load>
-      <a href="/work" class="inline-flex items-center text-primary hover:underline mb-8">
+      <a href={`${base}work`} class="inline-flex items-center text-primary hover:underline mb-8">
         ← Back to Work
       </a>
       <h1 class="text-5xl md:text-6xl font-bold mb-4">{title}</h1>
@@ -75,10 +77,10 @@ const { title, description, client, role, year, tags, coverImage } = entry.data;
   <section class="container-custom pb-20">
     <FadeIn client:load>
       <div class="flex justify-center gap-4">
-        <a href="/work" class="px-8 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors font-medium">
+        <a href={`${base}work`} class="px-8 py-3 bg-primary text-white rounded-full hover:bg-primary/90 transition-colors font-medium">
           View All Projects
         </a>
-        <a href="/contact" class="px-8 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors font-medium">
+        <a href={`${base}contact`} class="px-8 py-3 border-2 border-primary text-primary rounded-full hover:bg-primary hover:text-white transition-colors font-medium">
           Get in Touch
         </a>
       </div>
