@@ -11,7 +11,6 @@ const base = import.meta.env.BASE_URL;
   description="Get in touch to discuss your project, ask questions, or just say hello."
 >
 
-
   <section class="container-custom py-20">
     <div class="max-w-4xl mx-auto">
       <FadeIn client:load>
@@ -119,6 +118,20 @@ const base = import.meta.env.BASE_URL;
               </div>
             </div>
           </div>
+        </FadeIn>
+
+        <FadeIn client:load delay={0.2}>
+          <img
+            src="https://res.cloudinary.com/dl7lmku22/image/upload/w_800,f_auto,q_auto/v1762542116/IMG_4565_iyaq0q.jpg"
+            srcset="
+              https://res.cloudinary.com/dl7lmku22/image/upload/w_400,f_auto,q_auto/v1762542116/IMG_4565_iyaq0q.jpg 400w,
+              https://res.cloudinary.com/dl7lmku22/image/upload/w_800,f_auto,q_auto/v1762542116/IMG_4565_iyaq0q.jpg 800w,
+              https://res.cloudinary.com/dl7lmku22/image/upload/w_1200,f_auto,q_auto/v1762542116/IMG_4565_iyaq0q.jpg 1200w
+            "
+            sizes="(max-width: 640px) 100vw, 50vw"
+            alt={"Cassandra Garratt Portrait"}
+            class="w-full h-[450px] object-cover border-radius-2xl rounded-2xl shadow-lg object-top"
+          />
         </FadeIn>
       </div>
     </div>

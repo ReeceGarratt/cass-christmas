@@ -58,18 +58,61 @@ const base = import.meta.env.BASE_URL;
       </nav>
     </header>
     
-    <main class="pt-20">
+    <main class="pt-20 bg-stone-100">
       <slot />
     </main>
     
-    <footer class="bg-gray-50 mt-24 py-12">
+    <footer class="bg-stone-100 py-12">
       <div class="container-custom">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-gray-600">© {new Date().getFullYear()} UX Designer Portfolio. All rights reserved.</p>
           <div class="flex gap-6">
-            <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition-colors">GitHub</a>
-            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition-colors">LinkedIn</a>
-            <a href="https://dribbble.com" target="_blank" rel="noopener noreferrer" class="text-gray-600 hover:text-primary transition-colors">Dribbble</a>
+        <a
+                  href="https://github.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <img
+                    src={`${base}github-mark.svg`}
+                    alt="GitHub logo"
+                    class="w-8 h-8 transition duration-200 block group-hover:hidden"
+                  />
+                  <img
+                    src={`${base}github-mark-white.svg`}
+                    alt="GitHub logo white"
+                    class="w-8 h-8 transition duration-200 hidden group-hover:block"
+                  />
+                </a>
+
+                <a
+                  href="https://www.linkedin.com/in/cassandra-garratt-278379131/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <img
+                    src={`${base}InBug-Black.png`}
+                    alt="LinkedIn logo"
+                    class="w-[32px] h-[29px] transition duration-200 group-hover:invert group-hover:brightness-200"
+                  />
+                </a>
+
+                <a
+                  href="https://dribbble.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                >
+                  <img
+                    class="w-[65px] h-[65px] transition duration-200 block group-hover:hidden"
+                    src={`${base}dribbble.svg`}
+                    alt="Dribbble logo"/>
+                  <img
+                    class="w-[65px] h-[65px] transition duration-200 hidden group-hover:block"
+                    src={`${base}dribbble-white.svg`}
+                    alt="Dribbble logo"/>
+                </a>
           </div>
         </div>
       </div>
