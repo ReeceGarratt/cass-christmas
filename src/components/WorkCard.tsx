@@ -14,11 +14,11 @@ export default function WorkCard({ title, description, client, tags, coverImage,
   return (
     <motion.a
       href={`${base}work/${slug}`}
-      className="group rounded-2xl overflow-hidden bg-white shadow-sm hover:shadow-xl transition-all duration-300 h-full flex flex-col"
+      className="group rounded-2xl overflow-hidden bg-white shadow-xs hover:shadow-xl transition-all duration-300 h-full flex flex-col"
       whileHover={{ y: -8 }}
       transition={{ duration: 0.3 }}
     >
-      <div className="aspect-[16/10] overflow-hidden bg-gray-100 flex-shrink-0">
+      <div className="aspect-16/10 overflow-hidden bg-gray-100 shrink-0">
         <img
           src={coverImage}
           alt={title}
