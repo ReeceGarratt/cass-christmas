@@ -31,26 +31,26 @@ const { title, description, client, role, year, tags, coverImage } = entry.data;
         ← Back to Work
       </a>
       <h1 class="text-5xl md:text-6xl font-bold mb-4">{title}</h1>
-      <p class="text-xl text-gray-600 mb-8">{description}</p>
+      <p class="text-xl text-muted-foreground mb-8">{description}</p>
       
       <div class="flex flex-wrap gap-8 mb-8 text-sm">
         <div>
-          <div class="text-gray-500 mb-1">Client</div>
+          <div class="text-muted-foreground mb-1">Client</div>
           <div class="font-medium">{client}</div>
         </div>
         <div>
-          <div class="text-gray-500 mb-1">Role</div>
+          <div class="text-muted-foreground mb-1">Role</div>
           <div class="font-medium">{role}</div>
         </div>
         <div>
-          <div class="text-gray-500 mb-1">Year</div>
+          <div class="text-muted-foreground mb-1">Year</div>
           <div class="font-medium">{year}</div>
         </div>
       </div>
       
       <div class="flex flex-wrap gap-2 mb-12">
         {tags.map((tag) => (
-          <span class="px-3 py-1 bg-gray-100 text-gray-700 text-sm rounded-full">
+          <span class="px-3 py-1 bg-muted text-gray-t text-sm rounded-full">
             {tag}
           </span>
         ))}
@@ -89,16 +89,18 @@ const { title, description, client, role, year, tags, coverImage } = entry.data;
 </BaseLayout>
 
 <style is:global>
+  @reference "../../styles/global.css";
+
   .prose {
-    @apply text-gray-700;
+    @apply text-gray-t;
   }
   
   .prose h2 {
-    @apply text-3xl font-bold mt-12 mb-4 text-gray-900;
+    @apply text-3xl font-bold mt-12 mb-4 text-gray-t;
   }
   
   .prose h3 {
-    @apply text-2xl font-bold mt-8 mb-3 text-gray-900;
+    @apply text-2xl font-bold mt-8 mb-3 text-gray-t;
   }
   
   .prose p {
@@ -118,6 +120,6 @@ const { title, description, client, role, year, tags, coverImage } = entry.data;
   }
   
   .prose strong {
-    @apply font-semibold text-gray-900;
+    @apply font-semibold text-gray-t;
   }
 </style>

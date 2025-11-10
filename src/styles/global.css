@@ -5,8 +5,16 @@ layer(base);
 @import 'tailwindcss';
 
 @theme {
-  --color-primary: #a0a;
-  --color-secondary: #faf;
+  --color-primary: #FBA416;
+  --color-secondary: #D48A00;
+
+  --color-b-1: #FEFAF0;
+  --color-b-2: #FFF7E4;
+  --color-gray-t: #2E2E2E;
+  --color-accent: #FBA416;
+  --color-accent2: #FFA600;
+  --color-accent3: #D48A00;
+
 
   --font-sans: Inter, system-ui, sans-serif;
 }
@@ -43,6 +51,6 @@ layer(base);
   }
   
   body {
-    @apply bg-white text-gray-900;
+    @apply h-full bg-b-1 text-gray-t;
   }
 }
