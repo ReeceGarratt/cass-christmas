@@ -1,0 +1,50 @@
+---
+// StepCard.astro
+const { number, color = "#6366f1" } = Astro.props;
+---
+<div class="step-card">
+  <div class="circle" style={`background:${color}`}>{number}</div>
+  <div class="step-content">
+    <slot />
+  </div>
+</div>
+
+<style>
+.step-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  background: #fff;
+  border-radius: 1.5rem;
+  box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);
+  min-height: 260px;
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  position: relative;
+}
+.circle {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: -32px;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+}
+.step-content {
+  margin-top: 48px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  word-break: break-word;
+  line-height: 1.2;
+  max-width: 90%;
+}
+</style>

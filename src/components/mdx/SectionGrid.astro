@@ -1,0 +1,16 @@
+---
+// SectionGrid.astro
+const { children } = Astro.props;
+---
+<section class="section-grid">
+  <slot />
+</section>
+
+<style>
+.section-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 2rem;
+  margin: 2rem 0;
+}
+</style>

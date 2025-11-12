@@ -1,0 +1,17 @@
+---
+// WideBox.astro
+const { background = "#f3f4f6", border = "#e5e7eb", borderRadius = "1.5rem", padding = "2rem 2.5rem" } = Astro.props;
+---
+<div class="wide-box" style={`background:${background};border:1px solid ${border};border-radius:${borderRadius};padding:${padding};`}>
+  <slot />
+</div>
+
+<style>
+.wide-box {
+  width: 100%;
+  max-width: 100vw;
+  margin: 2rem 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+</style>
