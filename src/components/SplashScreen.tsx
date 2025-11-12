@@ -4,7 +4,6 @@ import animation1 from "../assets/animation/animation0.json";
 import animation2 from "../assets/animation/animation1.json";
 import animation3 from "../assets/animation/animation2.json";
 import animation4 from "../assets/animation/animation3.json";
-import { set } from "astro:schema";
 
 const SplashScreen: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
   
