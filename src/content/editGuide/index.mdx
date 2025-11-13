@@ -1,0 +1,58 @@
+---
+title: "Editing Guide"
+description: "A beginner-friendly guide to editing MDX content in this project."
+slug: "edit-guide"
+---
+
+# Editing Guide for MDX Pages
+
+Welcome! This guide will help you edit and create content for this site using MDX (Markdown + JSX). No prior experience is required.
+
+## What is MDX?
+MDX lets you write Markdown (for text formatting) and embed React/JSX components. It’s great for content-rich pages.
+
+## Basic Markdown Syntax
+
+- **Headings:**
+  - `# Heading 1`
+  - `## Heading 2`
+  - `### Heading 3`
+- **Bold:** `**bold text**`
+- **Italic:** `*italic text*`
+- **Lists:**
+  - Unordered: `- Item 1`  
+  - Ordered: `1. First item`
+- **Links:** `[Link text](https://example.com)`
+- **Images:** `![Alt text](path/to/image.png)`
+- **Code:**
+  - Inline: `` `code` ``
+  - Block:
+    ```
+    code block
+    ```
+
+## Embedding Components
+You can use custom components like `<InfoCard />` or `<SectionHeading />` directly in your MDX files:
+
+```jsx
+<InfoCard title="Example" description="This is an example info card." />
+```
+
+## Frontmatter
+At the top of each MDX file, you can add metadata:
+
+```
+---
+title: "Page Title"
+description: "Short description."
+---
+```
+
+## Tips
+- Save images in the `src/assets/` folder and reference them with a relative path.
+- Use components from `src/components/mdx/` for rich layouts.
+- Preview your changes locally before publishing.
+
+---
+
+Happy editing! If you have questions, check the README or ask a team member.
