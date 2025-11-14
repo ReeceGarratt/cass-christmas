@@ -25,7 +25,7 @@ const sortedWork = allWork.sort((a, b) => a.data.order - b.data.order);
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
       {sortedWork.map((work, index) => (
-        <div class={`fade-in fade-in-up fade-in-delay-${(index+1)*100}`}>
+        <div class="fade-in fade-in-up" style={`animation-delay: ${(index+1)*100}ms;`}>
           <WorkCard
             client:load
             title={work.data.title}
