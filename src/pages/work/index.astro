@@ -28,7 +28,7 @@ const sortedWork = allWork.sort((a, b) => a.data.order - b.data.order);
         <div class={`fade-in fade-in-up fade-in-delay-${(index+1)*100}`}>
           <WorkCard
             client:load
-            title={work.data.title}}
+            title={work.data.title}
             description={work.data.description}
             client={work.data.client}
             tags={work.data.tags}
