@@ -10,7 +10,7 @@ const allWork = await getCollection('work');
 const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
 ---
 
-<BaseLayout title="UX Designer Portfolio - Home">
+<BaseLayout title="UX Designer Portfolio - Home" description="Cassandra Garratt is a UX Designer specializing in creating intuitive, user-centered designs that solve real problems and delight users. Explore her portfolio and get in touch.">
 
   <!-- <SplashScreen client:only="react" /> -->
    
