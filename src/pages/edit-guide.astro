@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FadeIn from '../components/FadeIn';
+
 import Content from '../content/edit-guide/index.mdx';
 const title = "Editing Guide";
 const description = "A beginner-friendly guide to editing MDX content in this project.";
@@ -8,10 +8,10 @@ const description = "A beginner-friendly guide to editing MDX content in this pr
 
 <BaseLayout title={title} description={description}>
   <section class="container-custom py-20">
-    <FadeIn client:load delay={0.3}>
+    <div class="fade-in fade-in-up fade-in-delay-300">
       <div class="prose prose-lg max-w-4xl mx-auto">
         <Content />
       </div>
-    </FadeIn>
+    </div>
   </section>
 </BaseLayout>

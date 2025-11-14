@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FadeIn from '../components/FadeIn';
+
 import { getCollection } from 'astro:content';
 import WorkCard from '../components/WorkCard';
 import SplashScreen from '../components/SplashScreen';
@@ -16,18 +16,18 @@ const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a
    
   <!-- Hero Section -->
   <section class="container-custom py-20">
-    <FadeIn client:load>
+    <div class="fade-in fade-in-up">
       <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
         Crafting Digital<br />
         <span class="gradient-text">Experiences</span>
       </h1>
-    </FadeIn>
-    <FadeIn client:load delay={0.2}>
+    </div>
+    <div class="fade-in fade-in-up fade-in-delay-200">
       <p class="text-xl md:text-2xl text-gray-t max-w-2xl mb-8">
         UX Designer specializing in creating intuitive, user-centered designs that solve real problems and delight users.
       </p>
-    </FadeIn>
-    <FadeIn client:load delay={0.4}>
+    </div>
+    <div class="fade-in fade-in-up fade-in-delay-400">
       <div class="flex gap-4">
         <a href={`${base}work`} class="px-8 py-3 bg-accent2 text-white rounded-full hover:bg-accent2/90 transition-colors font-medium">
           View Work
@@ -36,20 +36,20 @@ const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a
           Get in Touch
         </a>
       </div>
-    </FadeIn>
+    </div>
   </section>
 
   <!-- Featured Work Section -->
   <section class="py-20 bg-b-1 w-full">
     <div class="container-custom">
-      <FadeIn client:load>
+      <div class="fade-in fade-in-up">
         <h2 class="text-4xl font-bold mb-4">Featured Work</h2>
         <p class="text-xl text-gray-t mb-12">Selected projects that showcase my design process and problem-solving skills</p>
-      </FadeIn>
+      </div>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         {featuredWork.map((work, index) => (
-          <FadeIn client:load delay={index * 0.1}>
+          <div class={`fade-in fade-in-up fade-in-delay-${(index+1)*100}`}>
             <WorkCard
               client:load
               title={work.data.title}
@@ -60,47 +60,47 @@ const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a
               slug={work.slug}
               base={base}
             />
-          </FadeIn>
+          </div>
         ))}
       </div>
       
-      <FadeIn client:load delay={0.4}>
+      <div class="fade-in fade-in-up fade-in-delay-400">
         <div class="text-center mt-12">
           <a href={`${base}work`} class="inline-block px-8 py-3 border-2 border-accent text-accent rounded-full hover:bg-accent2 hover:text-white transition-colors font-medium">
             View All Projects
           </a>
         </div>
-      </FadeIn>
+      </div>
     </div>
   </section>
 
   <!-- Skills Section -->
   <section class="container-custom py-20">
-    <FadeIn client:load>
+    <div class="fade-in fade-in-up">
       <h2 class="text-4xl font-bold mb-12 text-center">Design Approach</h2>
-    </FadeIn>
+    </div>
     <div class="grid md:grid-cols-3 gap-8 items-stretch">
-      <FadeIn client:load delay={0.1}>
+      <div class="fade-in fade-in-up fade-in-delay-100">
         <div class="flex flex-col h-full p-8 rounded-2xl border border-accent">
           <div class="text-4xl mb-4">🔍</div>
           <h3 class="text-2xl font-bold mb-3">Research</h3>
           <p class="text-gray-t">Deep dive into user needs, behaviors, and pain points to inform design decisions.</p>
         </div>
-      </FadeIn>
-      <FadeIn client:load delay={0.2}>
+      </div>
+      <div class="fade-in fade-in-up fade-in-delay-200">
         <div class="flex flex-col h-full p-8 rounded-2xl border border-accent">
           <div class="text-4xl mb-4">✨</div>
           <h3 class="text-2xl font-bold mb-3">Design</h3>
           <p class="text-gray-t">Create beautiful, intuitive interfaces that balance aesthetics with functionality.</p>
         </div>
-      </FadeIn>
-      <FadeIn client:load delay={0.3}>
+      </div>
+      <div class="fade-in fade-in-up fade-in-delay-300">
         <div class="flex flex-col h-full p-8 rounded-2xl border border-accent">
           <div class="text-4xl mb-4">🚀</div>
           <h3 class="text-2xl font-bold mb-3">Iterate</h3>
           <p class="text-gray-t">Test, gather feedback, and continuously improve the user experience.</p>
         </div>
-      </FadeIn>
+      </div>
     </div>
   </section>
 </BaseLayout>

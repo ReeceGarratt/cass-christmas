@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import FadeIn from '../../components/FadeIn';
+
 import WorkCard from '../../components/WorkCard';
 import { getCollection } from 'astro:content';
 
@@ -14,21 +14,21 @@ const sortedWork = allWork.sort((a, b) => a.data.order - b.data.order);
   description="Explore my case studies and design projects showcasing user-centered design solutions."
 >
   <section class="container-custom py-20">
-    <FadeIn client:load>
+    <div class="fade-in fade-in-up">
       <h1 class="text-5xl md:text-6xl font-bold mb-6">
         Selected <span class="gradient-text">Work</span>
       </h1>
       <p class="text-xl text-gray-t max-w-2xl mb-16">
         A collection of case studies showcasing my design process, from research and ideation to final implementation.
       </p>
-    </FadeIn>
+    </div>
 
     <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 auto-rows-fr">
       {sortedWork.map((work, index) => (
-        <FadeIn client:load delay={index * 0.1}>
+        <div class={`fade-in fade-in-up fade-in-delay-${(index+1)*100}`}>
           <WorkCard
             client:load
-            title={work.data.title}
+            title={work.data.title}}
             description={work.data.description}
             client={work.data.client}
             tags={work.data.tags}
@@ -36,7 +36,7 @@ const sortedWork = allWork.sort((a, b) => a.data.order - b.data.order);
             slug={work.slug}
             base={base}
           />
-        </FadeIn>
+        </div>
       ))}
     </div>
   </section>

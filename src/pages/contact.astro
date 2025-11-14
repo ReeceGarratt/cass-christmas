@@ -1,6 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
-import FadeIn from '../components/FadeIn';
+
 import CopyButton from '../components/CopyButton';
 import GlassImage from '../components/GlassImage';
 
@@ -14,19 +14,19 @@ const base = import.meta.env.BASE_URL;
 
   <section class="container-custom py-20">
     <div class="max-w-4xl mx-auto">
-      <FadeIn client:load>
+      <div class="fade-in fade-in-up">
         <h1 class="text-5xl md:text-6xl font-bold mb-6 text-center">
           Let's <span class="gradient-text">Connect</span>
         </h1>
         <p class="text-xl text-gray-t text-center mb-16">
           Have a project in mind or just want to chat? I'd love to hear from you.
         </p>
-      </FadeIn>
+      </div>
 
       <div class="grid md:grid-cols-2 gap-16">
 
         <!-- Contact Info -->
-        <FadeIn client:load delay={0.2}>
+        <div class="fade-in fade-in-up fade-in-delay-200">
           <div class="space-y-8">
             <div>
               <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
@@ -119,17 +119,15 @@ const base = import.meta.env.BASE_URL;
               </div>
             </div>
           </div>
-        </FadeIn>
+        </div>
 
-        <FadeIn client:load delay={0.2}>
-          
+        <div class="fade-in fade-in-up fade-in-delay-200">
           <GlassImage 
             client:load 
             alt="Cassandra"
             src={"https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop"}
           />
-
-        </FadeIn>
+        </div>
       </div>
     </div>
   </section>
