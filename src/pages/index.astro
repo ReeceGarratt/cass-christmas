@@ -10,12 +10,12 @@ const allWork = await getCollection('work');
 const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
 ---
 
-<BaseLayout title="UX Designer Portfolio - Home">
+<BaseLayout title="UX Designer Portfolio - Home" description="Cassandra Garratt is a UX Designer specializing in creating intuitive, user-centered designs that solve real problems and delight users. Explore her portfolio and get in touch.">
 
   <!-- <SplashScreen client:only="react" /> -->
    
   <!-- Hero Section -->
-  <section class="container-custom py-20 md:py-32">
+  <section class="container-custom py-20">
     <FadeIn client:load>
       <h1 class="text-5xl md:text-7xl font-bold mb-6 leading-tight">
         Crafting Digital<br />
@@ -23,13 +23,13 @@ const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a
       </h1>
     </FadeIn>
     <FadeIn client:load delay={0.2}>
-      <p class="text-xl md:text-2xl text-gray-600 max-w-2xl mb-8">
+      <p class="text-xl md:text-2xl text-gray-t max-w-2xl mb-8">
         UX Designer specializing in creating intuitive, user-centered designs that solve real problems and delight users.
       </p>
     </FadeIn>
     <FadeIn client:load delay={0.4}>
       <div class="flex gap-4">
-        <a href={`${base}work`} class="px-8 py-3 bg-accent3 text-white rounded-full hover:bg-accent2/90 transition-colors font-medium">
+        <a href={`${base}work`} class="px-8 py-3 bg-accent2 text-white rounded-full hover:bg-accent2/90 transition-colors font-medium">
           View Work
         </a>
         <a href={`${base}contact`} class="px-8 py-3 border-2 border-accent text-accent rounded-full hover:bg-accent2 hover:text-white transition-colors font-medium">
@@ -40,11 +40,11 @@ const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a
   </section>
 
   <!-- Featured Work Section -->
-  <section class="py-16 bg-b-1 md:py-16 w-full">
+  <section class="py-20 bg-b-1 w-full">
     <div class="container-custom">
       <FadeIn client:load>
         <h2 class="text-4xl font-bold mb-4">Featured Work</h2>
-        <p class="text-xl text-gray-600 mb-12">Selected projects that showcase my design process and problem-solving skills</p>
+        <p class="text-xl text-gray-t mb-12">Selected projects that showcase my design process and problem-solving skills</p>
       </FadeIn>
       
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -84,21 +84,21 @@ const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a
         <div class="flex flex-col h-full p-8 rounded-2xl border border-accent">
           <div class="text-4xl mb-4">🔍</div>
           <h3 class="text-2xl font-bold mb-3">Research</h3>
-          <p class="text-gray-600">Deep dive into user needs, behaviors, and pain points to inform design decisions.</p>
+          <p class="text-gray-t">Deep dive into user needs, behaviors, and pain points to inform design decisions.</p>
         </div>
       </FadeIn>
       <FadeIn client:load delay={0.2}>
         <div class="flex flex-col h-full p-8 rounded-2xl border border-accent">
           <div class="text-4xl mb-4">✨</div>
           <h3 class="text-2xl font-bold mb-3">Design</h3>
-          <p class="text-gray-600">Create beautiful, intuitive interfaces that balance aesthetics with functionality.</p>
+          <p class="text-gray-t">Create beautiful, intuitive interfaces that balance aesthetics with functionality.</p>
         </div>
       </FadeIn>
       <FadeIn client:load delay={0.3}>
         <div class="flex flex-col h-full p-8 rounded-2xl border border-accent">
           <div class="text-4xl mb-4">🚀</div>
           <h3 class="text-2xl font-bold mb-3">Iterate</h3>
-          <p class="text-gray-600">Test, gather feedback, and continuously improve the user experience.</p>
+          <p class="text-gray-t">Test, gather feedback, and continuously improve the user experience.</p>
         </div>
       </FadeIn>
     </div>
