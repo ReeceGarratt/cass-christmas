@@ -5,8 +5,8 @@ layer(base);
 @import 'tailwindcss';
 
 @theme {
-  --color-primary: #FBA416;
-  --color-secondary: #D48A00;
+  --color-primary: #FEFAF0;
+  --color-secondary: #FFF7E4;
 
   --color-b-1: #FEFAF0;
   --color-b-2: #FFF7E4;
@@ -42,7 +42,7 @@ layer(base);
 }
 
 @utility gradient-text {
-  @apply bg-clip-text text-transparent bg-linear-to-r from-primary to-secondary;
+  @apply bg-clip-text text-transparent bg-linear-to-r from-accent to-accent3;
 }
 
 @layer base {

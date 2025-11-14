@@ -44,25 +44,25 @@ const base = import.meta.env.BASE_URL;
     <meta property="twitter:image" content={new URL(image, Astro.site)} />
   </head>
   <body class="h-full">
-    <header class="fixed w-full top-0 z-50 bg-white/80 backdrop-blur-md border-b border-gray-200">
+    <header class="fixed w-full top-0 z-50 bg-b-2 backdrop-blur-md border-b border-gray-200">
       <nav class="container-custom py-4">
         <div class="flex justify-between items-center">
           <a href={`${base}`} class="text-xl font-bold gradient-text pe-8">Astro Site</a>
           <ul class="flex gap-8">
-            <li><a href={`${base}`} class="hover:text-primary transition-colors">Home</a></li>
-            <li><a href={`${base}work`} class="hover:text-primary transition-colors">Work</a></li>
-            <li><a href={`${base}about`} class="hover:text-primary transition-colors">About</a></li>
-            <li><a href={`${base}contact`} class="hover:text-primary transition-colors">Contact</a></li>
+            <li><a href={`${base}`} class="hover:text-accent transition-colors">Home</a></li>
+            <li><a href={`${base}work`} class="hover:text-accent transition-colors">Work</a></li>
+            <li><a href={`${base}about`} class="hover:text-accent transition-colors">About</a></li>
+            <li><a href={`${base}contact`} class="hover:text-accent transition-colors">Contact</a></li>
           </ul>
         </div>
       </nav>
     </header>
     
-    <main class="h-full min-h-[calc(100vh-10em)] bg-stone-100">
+    <main class="h-full min-h-[calc(100vh-10em)] bg-b-1">
       <slot />
     </main>
     
-    <footer class="bg-stone-100 py-12">
+    <footer class="bg-b-2 py-12">
       <div class="container-custom">
         <div class="flex flex-col md:flex-row justify-between items-center gap-4">
           <p class="text-gray-600">© {new Date().getFullYear()} Astro Site. All rights reserved.</p>
@@ -71,7 +71,7 @@ const base = import.meta.env.BASE_URL;
               href="https://github.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+              class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent2 transition-colors"
             >
               <img
                 src={`${base}github-mark.svg`}
@@ -89,12 +89,12 @@ const base = import.meta.env.BASE_URL;
               href="https://www.linkedin.com/in/cassandra-garratt-278379131/"
               target="_blank"
               rel="noopener noreferrer"
-              class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+              class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent2 transition-colors"
             >
               <img
                 src={`${base}InBug-Black.png`}
                 alt="LinkedIn logo"
-                class="w-[32px] h-[29px] transition duration-200 group-hover:invert group-hover:brightness-200"
+                class="w-8 h-[29px] transition duration-200 group-hover:invert group-hover:brightness-200"
               />
             </a>
 
@@ -102,7 +102,7 @@ const base = import.meta.env.BASE_URL;
               href="https://dribbble.com"
               target="_blank"
               rel="noopener noreferrer"
-              class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+              class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-accent2 transition-colors"
             >
               <img
                 class="w-[65px] h-[65px] transition duration-200 block group-hover:hidden"

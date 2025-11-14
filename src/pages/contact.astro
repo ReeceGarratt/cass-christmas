@@ -18,7 +18,7 @@ const base = import.meta.env.BASE_URL;
         <h1 class="text-5xl md:text-6xl font-bold mb-6 text-center">
           Let's <span class="gradient-text">Connect</span>
         </h1>
-        <p class="text-xl text-gray-600 text-center mb-16">
+        <p class="text-xl text-gray-t text-center mb-16">
           Have a project in mind or just want to chat? I'd love to hear from you.
         </p>
       </FadeIn>
@@ -30,7 +30,7 @@ const base = import.meta.env.BASE_URL;
           <div class="space-y-8">
             <div>
               <h2 class="text-2xl font-bold mb-6">Get in Touch</h2>
-              <p class="text-gray-600 mb-6">
+              <p class="text-gray-t mb-6">
                 I'm always open to discussing new projects, creative ideas, or opportunities to be part of your vision.
               </p>
             </div>
@@ -41,8 +41,8 @@ const base = import.meta.env.BASE_URL;
                 <div>
                   <div class="font-medium mb-0">Email</div>
                   <div class="flex items-center gap-4">
-                    <a href="mailto:workwith@cassandragarratt.com" class="text-primary hover:underline">
-                      workwith@someone.com
+                    <a href="mailto:workwith@cassandragarratt.com" class="text-accent hover:underline">
+                      workwith@cassandragarratt.com
                     </a>
                   
                     <CopyButton client:load text="workwith@cassandragarratt.com" />
@@ -54,7 +54,7 @@ const base = import.meta.env.BASE_URL;
                 <div class="text-2xl">📍</div>
                 <div>
                   <div class="font-medium mb-1">Location</div>
-                  <div class="text-gray-600">Johannesburg, South Africa</div>
+                  <div class="text-gray-t">Johannesburg, South Africa</div>
                 </div>
               </div>
               
@@ -62,7 +62,7 @@ const base = import.meta.env.BASE_URL;
                 <div class="text-2xl">🕐</div>
                 <div>
                   <div class="font-medium mb-1">Availability</div>
-                  <div class="text-gray-600">Open to new opportunities</div>
+                  <div class="text-gray-t">Open to new opportunities</div>
                 </div>
               </div>
             </div>
@@ -74,7 +74,7 @@ const base = import.meta.env.BASE_URL;
                   href="https://github.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                  class="group flex-1 shadow-sm min-w-0 h-12 bg-b-2 rounded-full flex items-center justify-center hover:bg-accent2 hover:text-white transition-colors duration-100"
                 >
                   <img
                     src={`${base}github-mark.svg`}
@@ -92,12 +92,12 @@ const base = import.meta.env.BASE_URL;
                   href="https://linkedin.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                  class="group flex-1 shadow-sm min-w-0 h-12 bg-b-2 rounded-full flex items-center justify-center hover:bg-accent2 hover:text-white transition-colors duration-100"
                 >
                   <img
                     src={`${base}InBug-Black.png`}
                     alt="LinkedIn logo"
-                    class="w-[32px] h-[29px] transition duration-200 group-hover:invert group-hover:brightness-200"
+                    class="w-8 h-[29px] transition duration-200 group-hover:invert group-hover:brightness-200"
                   />
                 </a>
 
@@ -105,7 +105,7 @@ const base = import.meta.env.BASE_URL;
                   href="https://dribbble.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  class="group flex-1 min-w-0 h-12 bg-gray-100 rounded-full flex items-center justify-center hover:bg-primary hover:text-white transition-colors"
+                  class="group flex-1 shadow-sm min-w-0 h-12 bg-b-2 rounded-full flex items-center justify-center hover:bg-accent2 hover:text-white transition-colors duration-100"
                 >
                   <img
                     class="w-[65px] h-[65px] transition duration-200 block group-hover:hidden"
