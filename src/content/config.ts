@@ -26,5 +26,5 @@ const editGuideCollection = defineCollection({
 
 export const collections = {
   work: workCollection,
-  editGuide: editGuideCollection,
+  'edit-guide': editGuideCollection,
 };
