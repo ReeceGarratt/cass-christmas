@@ -1,7 +1,9 @@
 import { defineConfig } from 'astro/config';
 
+
 import react from '@astrojs/react';
 import mdx from '@astrojs/mdx';
+import sitemap from '@astrojs/sitemap';
 
 import tailwindcss from '@tailwindcss/vite';
 
@@ -11,9 +13,13 @@ export default defineConfig({
   site: isProduction ? 'https://reecegarratt.github.io' : 'http://localhost:3000',
   base: isProduction ? '/astro-portfolio/' : '/',
   // site: 'https://cassandragarratt.com'
+
   integrations: [
     react(),
     mdx(),
+    sitemap({
+      filter: (page) => !page.includes('/edit-guide'),
+    }),
   ],
 
   vite: {

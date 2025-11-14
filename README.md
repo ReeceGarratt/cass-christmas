@@ -1,6 +1,6 @@
 # Portfolio
 
-A modern, design-first portfolio site built with Astro, Tailwind CSS, React, and MDX. Features case studies, smooth animations, and responsive design optimized for showcasing UX design work.
+A modern, design-first portfolio site built with Astro, Tailwind CSS, React, and MDX. Features case studies, smooth animations, and responsive design optimized for showcasing UX design work
 
 ## ✨ Features
 
