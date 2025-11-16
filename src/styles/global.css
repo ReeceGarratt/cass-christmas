@@ -32,13 +32,13 @@
 .drawer-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.5);
   z-index: 1000;
-  display: none;
+  pointer-events: none; opacity: 0;
   transition: background 0.2s;
 }
 .drawer-overlay.open {
-  display: block;
+  pointer-events: auto; 
+  opacity: 1;
 }
 
 /* Drawer Panel */
@@ -56,9 +56,15 @@
   display: flex;
   flex-direction: column;
   z-index: 1100;
+  will-change: transform;
 }
 .drawer.open {
   transform: translateX(0);
+}
+@media (prefers-reduced-motion: reduce) {
+  .drawer {
+    transition: none;
+  }
 }
 
 .drawer-close {
@@ -75,7 +81,6 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 .drawer-nav ul {
@@ -93,10 +98,13 @@
   font-weight: 600;
   transition: color 0.2s;
 }
+
 .drawer-nav a:hover,
 .drawer-nav a:focus {
-  color: var(--color-accent, #FBA416);
+  color: var(--color-accent2, #FFA600);
   outline: none;
+  border-radius: 0.5rem;
+  transition: background 0.2s, color 0.2s;
 }
 /* CSS-only fade-in animation utilities */
 .fade-in {
