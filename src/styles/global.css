@@ -1,3 +1,103 @@
+/* Responsive Navigation & Drawer Styles */
+.main-nav {
+  display: flex;
+  gap: 2rem;
+}
+
+@media (max-width: 450px) {
+  .main-nav {
+    display: none !important;
+  }
+  .hamburger-nav {
+    display: block !important;
+  }
+}
+
+.hamburger-nav {
+  display: none;
+}
+
+.hamburger-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  display: flex;
+  align-items: center;
+  font-size: 2rem;
+  color: var(--color-gray-t, #2E2E2E);
+}
+
+/* Drawer Overlay */
+.drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+  display: none;
+  transition: background 0.2s;
+}
+.drawer-overlay.open {
+  display: block;
+}
+
+/* Drawer Panel */
+.drawer {
+  position: fixed;
+  top: 0;
+  right: 0;
+  height: 100vh;
+  width: 100vw;
+  max-width: 100vw;
+  background: var(--color-b-1, #FEFAF0);
+  box-shadow: -2px 0 16px rgba(0,0,0,0.08);
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.22,1,0.36,1);
+  display: flex;
+  flex-direction: column;
+  z-index: 1100;
+}
+.drawer.open {
+  transform: translateX(0);
+}
+
+.drawer-close {
+  background: none;
+  border: none;
+  font-size: 2.5rem;
+  align-self: flex-end;
+  margin: 1.5rem 1.5rem 0 0;
+  cursor: pointer;
+  color: var(--color-gray-t, #2E2E2E);
+}
+
+.drawer-nav {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.drawer-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.drawer-nav li {
+  margin: 1.5rem 0;
+}
+.drawer-nav a {
+  font-size: 2rem;
+  color: var(--color-gray-t, #2E2E2E);
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+.drawer-nav a:hover,
+.drawer-nav a:focus {
+  color: var(--color-accent, #FBA416);
+  outline: none;
+}
 /* CSS-only fade-in animation utilities */
 .fade-in {
   opacity: 0;
