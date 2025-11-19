@@ -10,6 +10,7 @@
   }
   .hamburger-nav {
     display: block !important;
+    height: 120vh;
   }
 }
 
