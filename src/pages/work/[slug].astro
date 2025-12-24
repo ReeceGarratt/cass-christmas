@@ -25,7 +25,7 @@ const { title, description, client, role, year, tags, coverImage } = entry.data;
 
 <BaseLayout title={`${title} - Case Study`} description={description} image={coverImage}>
   <!-- Hero Section -->
-  <section class="container-custom py-20">
+  <section class="container-custom pt-20">
     <div class="fade-in fade-in-up">
       <a href={`${base}work`} class="inline-flex items-center text-accent hover:underline mb-8">
         ← Back to Work
@@ -50,16 +50,16 @@ const { title, description, client, role, year, tags, coverImage } = entry.data;
       
       <div class="flex flex-wrap gap-2 mb-12">
         {tags.map((tag) => (
-          <span class="px-3 py-1 bg-muted text-gray-t text-sm rounded-full">
+          <span class="px-3 py-1 font-bold bg-accent text-gray-t text-sm rounded-full">
             {tag}
           </span>
         ))}
       </div>
     </div>
 
-    <div class="fade-in fade-in-up fade-in-delay-200">
-      <div class="aspect-video rounded-2xl overflow-hidden mb-12">
-        <img src={coverImage} alt={title} class="w-full h-full object-cover" />
+    <div class="fade-in fade-in-up fade-in-delay-200 content-center justify-center">
+      <div class="aspect-video max-w-4xl mx-auto overflow-hidden mb-12 flex items-center justify-center">
+        <img src={coverImage} alt={title} class="h-full object-contain rounded-2xl"/>
       </div>
     </div>
   </section>
@@ -100,19 +100,35 @@ const { title, description, client, role, year, tags, coverImage } = entry.data;
   }
 
   .prose h2 {
-    @apply text-center text-3xl font-bold mt-12 mb-4 text-gray-t;
+    @apply text-left text-3xl font-bold mt-6 mb-6 text-gray-t;
   }
   
   .prose h3 {
-    @apply text-center text-2xl font-bold mt-8 mb-3 text-gray-t;
+    @apply text-left text-2xl font-bold mt-6 mb-3 text-gray-t;
   }
   
+  .prose h4 {
+    @apply text-left text-xl font-bold mt-6 mb-3 text-gray-t;
+  }
+
   .prose p {
     @apply mb-4 leading-relaxed;
   }
+
+  .prose .accentText {
+    @apply text-accent1;
+  }
   
-  .prose ul, .prose ol {
+  .prose ul {
     @apply mb-4 ml-6;
+    list-style-type: disc;
+    padding-left: 0.5rem;
+  }
+  
+  .prose ol {
+    @apply mb-4 ml-6;
+    list-style-type: decimal;
+    padding-left: 0.5rem;
   }
   
   .prose li {

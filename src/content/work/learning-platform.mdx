@@ -1,49 +1,261 @@
 ---
-title: "Learning Platform Redesign"
-description: "Improving the online learning experience for students and educators"
-client: "EduTech Academy"
-role: "UX Designer"
+title: "Re-imagining Joe Public United's Goal Setting & Tracking Platform"
+description: ""
+client: "Joe Public United"
+role: "UX/UI Designer"
 year: 2022
-tags: ["Education", "Learning", "Gamification", "Mobile First"]
-featured: false
-coverImage: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?w=800&h=500&fit=crop"
+tags: ["User Research", "Prototyping", "User Testing", "Gamification"]
+featured: true
+coverImage: "https://res.cloudinary.com/dl7lmku22/image/upload/v1766586411/Joe-Public_pnhkkf.png"
 order: 4
 ---
 
-## Project Overview
+import TwoColumn from '../../components/mdx/TwoColumn.astro'
+import SectionFlexGrid from '../../components/mdx/SectionFlexGrid.astro'
+import SectionGrid from '../../components/mdx/SectionGrid.astro'
+import StepCard from '../../components/mdx/StepCard.astro'
+import SectionHeading from '../../components/mdx/SectionHeading.astro'
+import Card from '../../components/mdx/Card.astro'
 
-EduTech Academy's learning platform needed a refresh to improve student engagement and course completion rates. The platform served both K-12 and adult learners with various courses.
+export const base = import.meta.env.BASE_URL;
 
-## Problem
+Joe Public United is a marketing company whose defining business goal is to drive
+continuous learning and professional growth for it’s employees.
 
-- Low course completion rate (35%)
-- Students losing track of progress
-- Difficult navigation between courses
-- Lack of motivation and engagement
+Historically Joe Public United employees have been required to use an excel sheet to
+track their career goals and KGI (Key Growth Indicators). The company found that
+60% of their employees weren’t achieving their set goals or KGI’s.
 
-## Research
+As an employee at the time I was painfully aware of what the experience of the
+dreaded excel sheet was, so when I was approached by the HR team to design a
+platform for this I jumped at the chance.
 
-Conducted surveys with 500 students and interviews with 20 educators to understand the learning experience.
+This project covered multiple aspects of a goal tracking interface including a
+dashboard, goal set up, reviewing goals with managers, setting up KPI’s etc. For this
+case study I will be focusing on the setting up of new goals on the platform.
 
-## Solution
+<br/>
 
-Implemented gamification elements, progress tracking, and personalized learning paths to increase engagement and completion rates.
+<SectionFlexGrid>
+  <StepCard number={1}>
+    Identify Business Needs
+  </StepCard>
+  <StepCard number={2}>
+    User Research
+  </StepCard>
+  <StepCard number={3}>
+    Personas
+  </StepCard>
+  <StepCard number={4}>
+    Desktop Research
+  </StepCard>
+  <StepCard number={5}>
+    User Journeys
+  </StepCard>
+  <StepCard number={6}>
+    Wireframing & UI Design
+  </StepCard>
+</SectionFlexGrid>
 
-## Key Features
 
-- Achievement system with badges
-- Progress visualization
-- Personalized course recommendations
-- Interactive learning modules
-- Peer discussion forums
+<SectionHeading>
+  Identify Business Needs
+</SectionHeading>
 
-## Results
+## Why isn't the excel sheet working for business?.
 
-- **60%** course completion rate (up from 35%)
-- **80%** increase in daily active users
-- **4.5** star average course rating
-- **45%** increase in social interactions
+Before taking this question to the users I asked the head of HR, the Chief Growth Officer and a line manager why they felt the current system wasn’t working and I received the following answers0
+* Staff didn’t understand how to fill out the excel sheet and HR was spending large amounts of time teaching staff to use the system every year
+* Set out goals were not being met by 60% of the company.
 
-## Takeaways
+**The Business Goals & Needs**
 
-Gamification and social features significantly improve learning engagement and outcomes.
+Business wanted a platform that would improve employee engagement with their goals %
+* Managers to track goal progress for each user.
+* KGI’s could be set and assigned.
+* Data could be automatically collected on goal success rates and employee success
+* Goals could be set up before hand and only reviewed with management
+
+For the sake of this case study I am only focusing on the employee goal setting portion of this project.
+
+<SectionHeading>
+  User Research
+</SectionHeading>
+
+## Understanding the User
+
+I spent 3 days interviewing 5 users across different departments and learnt the following:
+
+**How my user set goals in their daily lives:**
+
+* They take a look at something in their careers or lives that they find is hindering their improvement.
+* Think of ways to solve the problem.
+* Breakdown their solutions in actionable steps.
+
+
+**What they thought of the existing Joe Grow system**
+* Goals are too “big picture" Users found that they were setting goals that felt too big to start making them feel
+overwhelmed.
+* The excel sheet has been confusing, complicated and hard to use. Causing them to always need help when it was time
+to set their goals.
+* Use of uncommon terms or tracking methods that aren t intuitive.
+* The design of the excel sheet kept changing making it even more confusing
+* The experience relayed heavily on the manager you had.
+* 30% of my users could explain how to use a Joe Grow Excel Sheet.
+
+#### "I always feel stupid when I do my Joe Grow"
+<br/>
+The primary positive feedback I received was around the initiative itself and how it encouraged users to reflect on their careers
+and communicate their needs to their managers.
+
+<Card variant={"secondary"}>
+**Lesson Learnt**
+
+    During these interviews I found that users were very hesitant to share anything negative they had to say about the existing system. In one
+    case a participant actually expressed fear of being reprimanded by management.
+
+    This highlighted the importance of making a safe space for users where feedback is anonymous and my goals and intentions are clear.
+</Card>
+
+<SectionHeading>
+  Personas
+</SectionHeading>
+
+Using the data collected during my interviews I created 3 personas to keep our user types in
+mind during the design and review process.
+
+<SectionGrid>
+  <Card 
+    heading={"The Untrained Goal-Setter"}
+    icon={`${base}person-svgrepo-com.svg`}>
+
+    Employees unfamiliar with creating goals within the growth ecosystem.
+  </Card>
+  <Card 
+    heading={"The Experienced Goal-Setter"}
+    icon={`${base}person-svgrepo-com.svg`}>
+    
+    Employees that are familiar with setting
+    goals in their personal lives and/or in
+    the growth ecosystem.
+  </Card>
+  <Card 
+    heading={"The Non-Goal-Setter"}
+    icon={`${base}person-svgrepo-com.svg`}>
+
+    Employees that aren't familiar with setting goals in their personal or in the growth ecosystem.
+  </Card>
+</SectionGrid>
+
+<SectionHeading>
+  Desktop Research
+</SectionHeading>
+
+## How do users set a good goals?
+
+I researched the psychology behind successful goal setting, looking into different methodologies and ways to
+motivate meeting goals.
+
+I learnt alot about the ABCs of goals, types of goals, the E-E-E Model of goal setting, Locke’s theory but found that
+S.M.A.R.T goals covered the majority of what motivates somebody to reach a goal. Looking at my data and
+stakeholder requirements I followed the S.M.A.R.T goal framework.
+
+<SectionHeading>
+  User Journeys
+</SectionHeading>
+
+## Guiding users through building goals.
+
+Looking at how my users explained how they approach personal goals, their concerns with the existing platform
+and S.M.A.R.T goals I started to build an journey that would reflect the needs of my users.
+
+<SectionGrid>
+    <Card>
+        **Phase 1: Educational Page**
+
+        Here we focused on educating the employee on the benefits and purpose of a Joe Grow, 
+        with the aim of improving existing attitudes/assumptions towards the product.
+    </Card>
+    <Card>
+        **Phase 2: Identifying their current position and desired future position**
+
+        Identifying their current position and desired future position. 
+        Answering where they currently were in their career and where they would like to be by the next quarter.
+
+        eg: Currently a Junior but wants to be a Midweight
+    </Card>
+    <Card>
+        **Phase 3: What stands in their way (obstacles)**
+
+        Obstacles that could prevent them from getting to where they want to be. Or things they would need to achieve their goals
+    </Card>
+    <Card>
+        **Phase 4: Goals to move past obstacles**
+
+        Getting the user to breakdown their obstacle into smaller goals that they can achieve.
+    </Card>
+    <Card>
+        **Phase 5: Review and edit goals with their manager**
+
+        The user gets a second opinion on their goals and if they will help them progress.
+    </Card>
+    <Card>
+        **Phase 6: Key Growth Indicators**
+
+        KPIs are assigned to each employee by their manager, who will then sit with them to discuss how they can meet these.
+
+        Example:
+
+        KPI: *Streamlining the briefing process*
+
+        Goal: *Review & Update current briefing template*
+    </Card>
+</SectionGrid>
+
+<image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797247/flow_wbnenn.png" alt="First time Setup journey diagram" />
+
+<SectionHeading>
+  Wireframing & UI Design
+</SectionHeading>
+
+<TwoColumn>
+  <div>
+    ### So what did users think of this?
+
+    When my low fidelity wireframes were presented to some of our users we found that they didn t fully understand what we were saying, 
+    literally. The majority of our users weren't able to fill out the required form fields because they didn t understand what the labels meant.
+
+
+    During my conversations with the users I was able to find phrases
+    that clearly explained what was being asked. This change also had
+    the positive side effect of making the platform feel more
+    conversational and approachable.
+  </div>
+  <div>
+    <image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797249/joegrow6_wjipoc.png" alt="Import Collections new journey diagram" />
+  </div>
+</TwoColumn>
+
+<SectionHeading>
+  Wireframing & UI Design (again? Cass?)
+</SectionHeading>
+
+## The Outcome
+
+At the end of the first iteration of this project the platform was launched and socialised with its users with a
+focus on little to no training. The product has been a huge success and is reported to have improved the
+general attitude towards these goal setting exercises.
+
+<TwoColumn>
+    <div>
+        <image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797249/joegrow2_ixe9mk.png" alt="Import Collections new journey diagram" />
+        <image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797250/joegrow4_t0h2xn.png" alt="Import Collections new journey diagram" />
+        <image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797249/joegrow6_wjipoc.png" alt="Import Collections new journey diagram" />
+    </div>
+
+    <div>
+        <image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797250/joegrow3_nzkxzf.png" alt="Import Collections new journey diagram" />
+        <image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797247/joegrow5_h9elvj.png" alt="Import Collections new journey diagram" />
+        <image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797257/joegrow7_uenfnx.png" alt="Import Collections new journey diagram" />
+    </div>
+</TwoColumn>

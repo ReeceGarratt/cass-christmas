@@ -10,9 +10,12 @@ const allWork = await getCollection('work');
 const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a.data.order - b.data.order).slice(0, 3);
 ---
 
-<BaseLayout title="UX Designer Portfolio - Home" description="Cassandra Garratt is a UX Designer specializing in creating intuitive, user-centered designs that solve real problems and delight users. Explore her portfolio and get in touch.">
+<BaseLayout 
 
-  <!-- <SplashScreen client:only="react" /> -->
+  title="Cassandra Garratt - Home" 
+  description="Cassandra Garratt is a Senior UX Designer with a passion for inclusive technology and user advocacy. Explore her portfolio and get in touch.">
+
+  <SplashScreen client:only="react" />
    
   <!-- Hero Section -->
   <section class="container-custom py-20">
@@ -24,7 +27,7 @@ const featuredWork = allWork.filter(work => work.data.featured).sort((a, b) => a
     </div>
     <div class="fade-in fade-in-up fade-in-delay-200">
       <p class="text-xl md:text-2xl text-gray-t max-w-2xl mb-8">
-        UX Designer specializing in creating intuitive, user-centered designs that solve real problems and delight users.
+        A proactive Senior UX Designer with a passion for inclusive technology and user advocacy. I create intuitive, user-centered designs that solve real problems and delight users.
       </p>
     </div>
     <div class="fade-in fade-in-up fade-in-delay-400">

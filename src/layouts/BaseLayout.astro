@@ -9,7 +9,7 @@ interface Props {
   image?: string;
 }
 
-const { title, description = 'UX Designer Portfolio - Creating thoughtful digital experiences', image = '/og-image.jpg' } = Astro.props;
+const { title, description = 'Cassandra Garratt Portfolio - Creating thoughtful digital experiences', image = '/og-image.jpg' } = Astro.props;
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
 const base = import.meta.env.BASE_URL;
 ---
@@ -55,7 +55,7 @@ const base = import.meta.env.BASE_URL;
     <header class="fixed w-full top-0 z-50 bg-b-2 backdrop-blur-md border-b border-gray-200">
       <nav class="container-custom py-4">
         <div class="flex justify-between items-center">
-          <a href={`${base}`} class="text-xl font-bold gradient-text pe-8">Astro Site</a>
+          <a href={`${base}`} class="text-xl font-bold gradient-text pe-8">Cassandra Garratt</a>
             <ul class="main-nav flex gap-8">
               <li><a href={`${base}`} class="hover:text-accent transition-colors">Home</a></li>
               <li><a href={`${base}work`} class="hover:text-accent transition-colors">Work</a></li>
