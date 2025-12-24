@@ -140,6 +140,7 @@ const SplashScreen: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
             loop
             style={{ width: 220, height: 220 }}
           />
+          <h1 className="text-xs text-white">{"under the tree!"}</h1>
         </div>
       )}
       {step === 3 && (
@@ -157,6 +158,7 @@ const SplashScreen: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
             loop
             style={{ width: 220, height: 220 }}
           />
+          <h1 className="text-xs text-white">{"well, open it <3"}</h1>
         </div>
       )}
 
@@ -171,9 +173,13 @@ const SplashScreen: React.FC<{ onFinish?: () => void }> = ({ onFinish }) => {
 
           <div className="container-custom py-20 text-center">
 
-            <h1 className="text-2xl text-white">{
-              !hasClickedSanta ? '!!!Dancing Santa!!!' : 'Okay no. I really did do better than this... One more click for a surprise!'
-            }</h1>
+            <h1 className="text-l text-white">
+              {
+                !hasClickedSanta ? '!!!Dancing Santa!!!' : 'Okay no. I really did do better than this... One more click for a surprise!'
+              }
+            </h1>
+            <br/>
+          
           </div>
 
         </div>
