@@ -11,7 +11,7 @@ const isProduction = process.env.NODE_ENV === 'production' || process.env.GITHUB
 
 export default defineConfig({
   site: isProduction ? 'https://reecegarratt.github.io' : 'http://localhost:3000',
-  base: isProduction ? '/astro-portfolio/' : '/',
+  base: isProduction ? '/cass/' : '/',
   // site: 'https://cassandragarratt.com'
 
   integrations: [
