@@ -1,20 +1,21 @@
 ---
 // SectionHeading.astro
-const { children, color = "#6366f1" } = Astro.props;
+const { children } = Astro.props;
 ---
-<div class="section-heading" style={`background:${color}`}>
-  <span>{children}</span>
+<div class="section-heading" style={`background:var(--color-accent1)`}>
+  <slot />
 </div>
 
 <style>
 .section-heading {
-  display: inline-block;
-  padding: 0.5rem 2rem;
+  flex: 1;
+  width: 250px;
+  text-align: center;
+  padding: 0rem 0.5rem;
   border-radius: 2rem;
-  color: #fff;
-  font-size: 2rem;
+  font-size: 1rem;
   font-weight: bold;
-  margin-bottom: 2rem;
+  margin-top: 4rem;
   letter-spacing: 0.01em;
 }
 </style>

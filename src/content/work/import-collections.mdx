@@ -11,156 +11,187 @@ client: "Standard Bank"
 role: "Senior UX Designer"
 year: 2024
 featured: true
-coverImage: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&h=500&fit=crop"
+coverImage: "https://res.cloudinary.com/dl7lmku22/image/upload/v1766586411/logo-Standard-Bank_ez88u0.webp"
 ---
 import TwoColumn from '../../components/mdx/TwoColumn.astro'
+import SectionFlexGrid from '../../components/mdx/SectionFlexGrid.astro'
+import SectionGrid from '../../components/mdx/SectionGrid.astro'
+import StepCard from '../../components/mdx/StepCard.astro'
+import SectionHeading from '../../components/mdx/SectionHeading.astro'
+import Card from '../../components/mdx/Card.astro'
 
-<h2>Curating a better Experience for the Import Collections Team.</h2>
-<TwoColumn>
-  <div>
-    **UX Designer**\
-    User Research | Process Design | User Journeys
-  </div>
-  <div>
-    Standard Bank provides a service known as Import Collections in which they act as an intermediary between their Client (a business importing goods) and a foreign bank representing the exporter. This service reduces the risk for the importer while earning the bank a transaction fee.
+export const base = import.meta.env.BASE_URL;
 
-    Up until now, initiating this service has been a manual process, requiring Standard Bank staff to manually capture, cross check and audit data.
+Standard Bank provides a service known as Import Collections in which they act as an intermediary between their Client (a business importing goods) and a foreign bank representing the exporter. This service reduces the risk for the importer while earning the bank a transaction fee.
 
-    I was tasked with transforming this interaction into an easier and faster journey on Standard Bank’s B2B platform, Trade Online.
-  </div>
-</TwoColumn>
+Up until now, initiating this service has been a manual process, requiring Standard Bank staff to manually capture, cross check and audit data.
 
-1
-Identify Business
+I was tasked with transforming this interaction into an easier and faster journey on Standard Bank’s B2B platform, Trade Online.
 
-Needs
+<br/>
 
-2
-User Research
+<SectionFlexGrid>
+  <StepCard number={1}>
+    Identify Business Needs
+  </StepCard>
+  <StepCard number={2}>
+    User Research
+  </StepCard>
+  <StepCard number={3}>
+    Personas
+  </StepCard>
+  <StepCard number={4}>
+    User Journeys
+  </StepCard>
+  <StepCard number={5}>
+    Wireframing & UI Design
+  </StepCard>
+</SectionFlexGrid>
 
-3
-Personas
+<SectionHeading>
+  Identify Business Needs
+</SectionHeading>
 
-5
-Wireframing &
+## What was Actually Happening?.
 
-UI Design
+The Standard Bank Import Collections Staff were spending many hours per project referencing screenshots and printed physical 
+documents to capture data in their system.
 
-4
-User Journeys
+**The Business Goals & Needs**
+
+Business felt that the staff were spending more time on data capturing than providing excellent service to their clients.To better 
+understands businesses concerns we held a one day workshop to identify their needs
+
+* Smooth and Accurate data capturing
+* Reduce swivel chairing
+* Tracking of where the client is in their process for better reporting;
+<br />
+## Taking it Step by Step.
 
 With my BA I performed an Observational study with the staff to gain a better idea of their AS-IS process. This 
 allowed us to better identify where we could optimise and gave our users the ability to voice any pains in the 
 moment.
 
-Taking it Step by Step.
 
-The Standard Bank Import Collections Staff were spending many hours per project referencing screenshots and printed physical 
-documents to capture data in their system.
+<SectionHeading>
+  User Research
+</SectionHeading>
+## Our Users.
 
-<image src="/images/import-collections-2.png" alt="Import Collections workflow diagram" />
+<SectionGrid>
+  <Card 
+    heading={"The Client"}
+    icon={`${base}person-svgrepo-com.svg`}>
 
-The Business Goals & Needs
+    The Standard Bank Client who is 
+    importing goods.
 
-Business felt that the staff were spending more time on data capturing than providing excellent service to their clients.To better 
-understands businesses concerns we held a one day workshop to identify their needs
+    Due to Bank Regulations we were not 
+    able to talk to The Client user. We spoke 
+    to The Trade Officer and The Checker and 
+    plan on getting user feedback from The 
+    Client once there is a live version of the 
+    platform.
+  </Card>
+  <Card 
+    heading={"The Checker"}
+    icon={`${base}person-svgrepo-com.svg`}>
 
- Smooth and Accurate data capturing
- Reduce swivel chairing
- Tracking of where the client is in their process for better reporting;
 
-What was Actually Happening?.
+    Employee responsible for double 
+    checking the data the Trade Officer 
+    uploaded.
 
-Identify Business Needs
+    **Key Pain Points**
 
-Our Users.
+    * Keeping track of projects awaiting 
+    checking
+    * Unnecessary mistakes.
+  </Card>
+  <Card 
+    heading={"The Trade Officer"}
+    icon={`${base}person-svgrepo-com.svg`}>
 
-The Client
+    Employee responsible for receiving and 
+    capturing data they receive from the 
+    Client.
 
-The Standard Bank Client who is 
-importing goods.
+    **Key Pain Points**
 
-Due to Bank Regulations we were not 
-able to talk to The Client user. We spoke 
-to The Trade Officer and The Checker and 
-plan on getting user feedback from The 
-Client once there is a live version of the 
-platform.
+    * The use of 5 different platforms.
+    * The amount of time spent uploading data.
+    * Keeping track of data across multiple platforms and emails.
+    * No quick reference to where in the process the client is.
+  </Card>
+</SectionGrid>
 
-The Checker
+<SectionHeading>
+  User Journeys
+</SectionHeading>
 
-Employee responsible for double 
-checking the data the Trade Officer 
-uploaded
-
-Key Pain Points
-
- Keeping track of projects awaiting 
-checking
-
- Unnecessary mistakes.
-
-The Trade Officer
-
-Employee responsible for receiving and 
-capturing data they receive from the 
-Client.
-
-Key Pain Points
-
- The use of 5 different platforms
- The amount of time spent uploading 
-data
- Keeping track of data across multiple 
-platforms and emails
- No quick reference to where in the 
-process the client is.
-
-User Research
-
-The new user journey.
+## The new user journey.
 Our Goal was to keep our users in one platform for as much of the journey as possible. 
-
-<image src="/images/import-collections-3.png" alt="Import Collections new journey diagram" />
 
 For the Trade Officer we worked to reduce swivel chairing by integrating the required programs 
 where possible.
 
+<image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797225/workflow_kllmgp.png" alt="Import Collections new journey diagram" />
+
 For the Checker we focused on improving access to the projects, making changes requests faster 
 and trackable.
+
+<image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797229/flowDiagram2_jfp1er.png" alt="Import Collections new journey diagram" />
 
 For the Client our goal was to make it accessible and approving the captured data on the Trade 
 Online platform.
 
-User Journeys
+<image src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797223/clientFlows_nwsnco.png" alt="Import Collections new journey diagram" />
 
-Future State - Contextual Change requests
+<SectionHeading>
+  Wireframing & UI Design
+</SectionHeading>
 
-As a future improvement we want to connect the change request directly to the field it relates to. Allowing the Checker to make notes in 
-context instead of them having to pause their flow to scroll down and add comments to a list in the text box.
-
-This will also assist the Trade Officer when they are making updates.
-
-Checker users are able to add comments to the project file that would trigger an email and 
-platform notification for the Trade Officer. These comments would be trackable in the project 
-history.
-
-Reviewing & Requesting Changes.
-
+### Easier Data Capture.
 To help expedite the data capturing process we broke down the data required into smaller chunks 
 and organised them according to how they can appear on the documentation. This approach not 
 only reduces the amount of information the user see’s at once, its also helps them re-start incase 
 they are disturbed.
 
-Future State - Automagical Data
+<TwoColumn>
+  <div>
+    <p style="font-weight: bold">Previous</p>
+    <image style={"margin-top: 0"} src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797229/oldUI_a0npq5.png" alt="Import Collections new journey diagram" />
+  </div>
+  <div>
+    <p style="font-weight: bold">New</p>
+    <image style={"margin-top: 0"} src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797226/screenshot1_vzzs8w.png" alt="Import Collections new journey diagram" />
+  </div>
+</TwoColumn>
+
+**Future State - Automagical Data**
+
+As a future improvement we want to connect the change request directly to the field it relates to. Allowing the Checker to make notes in 
+context instead of them having to pause their flow to scroll down and add comments to a list in the text box.
+
+
+## Reviewing & Requesting Changes.
+
+Checker users are able to add comments to the project file that would trigger an email and 
+platform notification for the Trade Officer. These comments would be trackable in the project 
+history.
+
+<TwoColumn>
+  <div>
+    <image style={"margin-top: 1rem"} src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797228/screenshot2_rpfpw2.png" alt="Import Collections new journey diagram" />
+  </div>
+  <div>
+    <image style={"margin-top: 1rem"} src="https://res.cloudinary.com/dl7lmku22/image/upload/v1762797223/screenshot3_pgd8oz.png" alt="Import Collections new journey diagram" />
+  </div>
+</TwoColumn>
+
+**Future State - Contextual Change requests**
 
 The future state we were developing was to allow the agent to upload the scanned documentation and 
 use a document scanning API to automatically fill in the data as it saw it on the document.
 
-Wireframing & UI Design
-
-Easier Data Capture.
-
-Wireframing & UI Design
-
-c.c.greeff@gmail.com
+This will also assist the Trade Officer when they are making updates.

@@ -1,0 +1,71 @@
+---
+// Card.astro
+const { icon, heading, headingSize, borderColor, variant = "primary" } = Astro.props;
+---
+<div
+  class="card"
+  style={
+    [
+      // Border color prop takes precedence
+      borderColor
+        ? `border: 1px solid ${borderColor};`
+        : variant === "secondary"
+        ? "border: 1px solid var(--color-accent1, #fff);"
+        : undefined,
+      // Background color by variant
+      variant === "primary"
+        ? "background: var(--color-b-2, #fff); box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);"
+        : variant === "secondary"
+        ? "background: var(--color-b-1, #fff);"
+        : variant === "tertiary"
+        ? "background: var(--color-accent1, #fff); box-shadow: 0 2px 12px 0 rgba(0,0,0,0.06);"
+        : undefined,
+      icon ? "padding-top: 2rem;" : undefined,
+    ]
+      .filter(Boolean)
+      .join(" ")
+  }
+>
+  {icon && (
+    <div class="card-icon">
+      {typeof icon === 'string' ? (
+        <img src={icon} alt="Card icon" style="height: 80px; width: 80px; object-fit: contain;" />
+      ) : (
+        icon
+      )}
+    </div>
+  )}
+    {heading && 
+        <div style={[
+          `font-weight: bold; font-size: ${headingSize};`,
+          icon && `margin-right: 4.5rem; font-weight: bold; font-size: ${headingSize};`
+        ]}>
+          {heading}
+        </div>
+    }
+    <div style={icon ? `margin-top: 1.5rem;` : undefined}>
+        <slot />
+    </div>
+</div>
+
+<style>
+.card {
+  position: relative;
+  /* background is set inline based on variant */
+  border-radius: 1.25rem;
+  padding: 1.5rem 1.5rem 1.5rem 1.5rem;
+  overflow: visible;
+  /* border is set inline if borderColor or variant is provided */
+}
+.card-icon {
+  position: absolute;
+  top: -30px; /* 50% of icon height if icon is 50px tall */
+  right: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  z-index: 2;
+}
+</style>

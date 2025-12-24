@@ -1,0 +1,23 @@
+---
+// SectionFlexGrid.astro
+const { children } = Astro.props;
+---
+<section class="section-flex-grid">
+  <slot />
+</section>
+
+<style>
+.section-flex-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  margin: 2rem 0;
+}
+.section-flex-grid > * {
+  flex: 1 1 220px;
+  max-width: 320px;
+  min-width: 220px;
+  box-sizing: border-box;
+}
+</style>
